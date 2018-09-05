@@ -1,0 +1,74 @@
+#logo
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 -238px
+path, ellipse, circle
+    fill: none;
+    stroke: black/*線の色を指定する*/
+    stroke-dasharray: 50;/*線の間隔を指定する*/
+    stroke-dashoffset: 0;/*線の位置を指定する(IEは効かない属性)*/
+    stroke-width: 15;/*線の太さを指定する*/
+    -webkit-animation: hello 20s ease-in forwards;
+    animation: hello 10s ease-in forwards;
+.eye
+    animation: eyebase 10s ease-in forwards;
+.eyep
+    animation: eyep 10s ease-in forwards;
+ @-webkit-keyframes hello {
+ 0% {
+ stroke-dashoffset: 2000;
+ fill:transparent; /*透過*/
+}
+ 50% {
+ fill:transparent; /*透過*/
+ stroke-width: 2
+}
+ 100% {
+ stroke-dashoffset: 0;
+stroke-width: 0
+}
+}
+@keyframes hello {
+ 0% {
+ stroke-dashoffset: 2000;
+ fill:transparent; /*透過*/
+}
+ 50% {
+ fill:transparent; /*透過*/
+ stroke-width: 2
+}
+ 100% {
+ stroke-dashoffset: 0;
+ stroke-width: 0
+}
+}
+
+@keyframes eyebase {
+    0%{
+        fill:transparent; /*透過*/
+        stroke-dashoffset: 2000;
+    }
+    50%{
+         fill:transparent;
+          stroke-width: 2
+    }
+    100%{
+        fill black;
+         stroke-width: 0
+    }
+}
+@keyframes eyep {
+    0%{
+        fill:transparent; /*透過*/
+        stroke-dashoffset: 2000;
+    }
+    50%{
+         fill:transparent;
+          stroke-width: 2
+    }
+    100%{
+        fill #4D459B;
+         stroke-width: 0
+    }
+}
